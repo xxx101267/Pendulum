@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		.clock-box {
+		   width:300px;
+		   height:300px;
+		   margin:100px auto;
+		   border:1px solid #00ff90;
+		}
+
+		.clock {
+		   width: 2px;
+		   height: 100px;
+		   background: #000000;
+		   margin: 30px auto;
+		   position: relative;
+		 }
+		/*.clock::after {
+		   content: "";
+		   position: absolute;
+		   bottom: -20px;
+		   left: -9px;
+		   width: 20px;
+		   height: 20px;
+		   border-radius: 10px;
+		   background: #ff0000;
+		}*/
+		.dot{
+			position: absolute;
+		   bottom: -20px;
+		   left: -9px;
+		   width: 20px;
+		   height: 20px;
+		   border-radius: 10px;
+		   background: #ff0000;
+		}
+
+		.clock {
+		   -webkit-animation: go 1s ease-in-out alternate infinite;
+		   -moz-animation: go 1s ease-in-out alternate infinite;
+		   animation: go 1s ease-in-out alternate infinite;
+		}
+		@keyframes go {
+		   0% {
+		       -webkit-transform: rotate(30deg);
+		       -webkit-transform-origin: top center;
+		       -moz-transform: rotate(30deg);
+		       -moz-transform-origin: top center;
+		       transform: rotate(30deg);
+		       transform-origin: top center;
+		    }
+		    100% {
+		       -webkit-transform: rotate(-30deg);
+		       -webkit-transform-origin: top center;
+		       -moz-transform: rotate(-30deg);
+		       -moz-transform-origin: top center;
+		       transform: rotate(-30deg);
+		       transform-origin: top center;
+		    }
+		}	
+		@keyframes changeC {
+		   0% {
+		       background-color: pink;
+		    }
+		    100% {
+		       background-color: yellow;
+		    }
+		}
+	</style>
+</head>
+<body>
+	<div class="clock-box">
+	   <div class="clock">
+	   		<div class="dot"></div>
+	   </div>
+	   
+	</div>
+
+</body>
+</html>
